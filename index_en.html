@@ -208,6 +208,89 @@
             margin-bottom: 1.5rem;
             letter-spacing: 0.01em;
         }
+
+        .coverage {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .coverage details {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .coverage summary {
+            font-size: 0.8125rem;
+            color: #4a4a4a;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            transition: color 0.15s ease;
+        }
+
+        .coverage summary:hover {
+            color: #9C1B20;
+        }
+
+        .coverage summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .coverage summary::marker {
+            display: none;
+            content: "";
+        }
+
+        .coverage summary .pulse-dot {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background-color: #34a853;
+            border-radius: 50%;
+            margin-right: 0.4rem;
+            vertical-align: middle;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .coverage summary::after {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-right: 1.5px solid #999;
+            border-bottom: 1.5px solid #999;
+            transform: rotate(45deg);
+            margin-left: 0.4rem;
+            vertical-align: middle;
+            margin-bottom: 2px;
+            transition: transform 0.2s ease, border-color 0.15s ease;
+        }
+
+        .coverage summary:hover::after {
+            border-color: #9C1B20;
+        }
+
+        .coverage details[open] summary::after {
+            transform: rotate(-135deg);
+            margin-bottom: -2px;
+        }
+
+        .coverage-list {
+            margin-top: 0.5rem;
+            padding-left: 0.875rem;
+            columns: 2;
+            column-gap: 2rem;
+            font-size: 0.75rem;
+            color: #888;
+            line-height: 1.9;
+            list-style: none;
+        }
     </style>
 </head>
 <body>
@@ -234,6 +317,27 @@
         </ul>
 
         <p class="status">Working prototype · Sourced answers · Expanding corpus</p>
+
+        <div class="coverage">
+            <details>
+                <summary><span class="pulse-dot"></span>Live: MRC de Rivière-du-Loup (13 municipalities)</summary>
+                <ul class="coverage-list">
+                    <li>Cacouna</li>
+                    <li>L'Isle-Verte</li>
+                    <li>Notre-Dame-des-Sept-Douleurs</li>
+                    <li>Notre-Dame-du-Portage</li>
+                    <li>Rivière-du-Loup</li>
+                    <li>Saint-Antonin</li>
+                    <li>Saint-Arsène</li>
+                    <li>Saint-Cyprien</li>
+                    <li>Saint-Épiphane</li>
+                    <li>Saint-François-Xavier-de-Viger</li>
+                    <li>Saint-Hubert-de-Rivière-du-Loup</li>
+                    <li>Saint-Modeste</li>
+                    <li>Saint-Paul-de-la-Croix</li>
+                </ul>
+            </details>
+        </div>
 
         <div class="cta-section">
             <a href="https://app.balise.ai/" class="btn">Launch the app</a>
