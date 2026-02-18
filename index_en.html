@@ -209,6 +209,55 @@
             letter-spacing: 0.01em;
         }
 
+        .domain {
+            margin-bottom: 2rem;
+        }
+
+        .jurisdiction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: #888;
+            margin-bottom: 0.75rem;
+        }
+
+        .jurisdiction span {
+            color: #4a4a4a;
+            font-weight: 500;
+        }
+
+        .jurisdiction .arrow {
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        .reg-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.375rem;
+        }
+
+        .reg-tags span {
+            font-size: 0.6875rem;
+            color: #888;
+            background: #f5f5f5;
+            border: 1px solid #eee;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            letter-spacing: 0.01em;
+        }
+
+        .reg-tags .more {
+            background: none;
+            border: none;
+            color: #999;
+            font-style: italic;
+            padding: 0.2rem 0;
+        }
+
         .coverage {
             text-align: center;
             margin-bottom: 1.5rem;
@@ -308,7 +357,26 @@
 
         <h1>Your beacon in complex regulations.</h1>
 
-        <p class="subtitle">Balise AI is AI-enabled regulatory navigation for citizens and municipal teams with source-grounded answers and direct access to the underlying documents (municipal → regional → provincial).</p>
+        <p class="subtitle">Balise AI is AI-enabled regulatory navigation for citizens and municipal teams with source-grounded answers and direct access to the underlying documents.</p>
+
+        <div class="domain">
+            <div class="jurisdiction">
+                <span>Municipal</span>
+                <span class="arrow">→</span>
+                <span>MRC</span>
+                <span class="arrow">→</span>
+                <span>Provincial</span>
+            </div>
+            <div class="reg-tags">
+                <span>Zoning</span>
+                <span>Construction</span>
+                <span>Subdivision</span>
+                <span>PIIA</span>
+                <span>Urban planning</span>
+                <span>Permits</span>
+                <span class="more">and more</span>
+            </div>
+        </div>
 
         <ul class="features">
             <li>Find the relevant rules fast. Less digging, less back-and-forth</li>
