@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balise IA - Votre balise dans la complexité réglementaire</title>
+    <title>Balise IA - Consultez vos règlements municipaux avec l'IA</title>
     <style>
         * {
             box-sizing: border-box;
@@ -33,11 +33,11 @@
             bottom: 0;
             pointer-events: none;
             background:
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 18%, rgba(156, 27, 32, 0.05) 18.5%, transparent 19%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 28%, rgba(156, 27, 32, 0.04) 28.5%, transparent 29%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 40%, rgba(156, 27, 32, 0.03) 40.5%, transparent 41%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 55%, rgba(156, 27, 32, 0.025) 55.5%, transparent 56%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 72%, rgba(156, 27, 32, 0.02) 72.5%, transparent 73%);
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 18%, rgba(156, 27, 32, 0.10) 18.5%, transparent 19%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 28%, rgba(156, 27, 32, 0.08) 28.5%, transparent 29%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 40%, rgba(156, 27, 32, 0.06) 40.5%, transparent 41%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 55%, rgba(156, 27, 32, 0.05) 55.5%, transparent 56%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 72%, rgba(156, 27, 32, 0.04) 72.5%, transparent 73%);
             z-index: 0;
         }
 
@@ -46,7 +46,7 @@
             padding: 3rem;
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            max-width: 680px;
+            max-width: 760px;
             width: 100%;
             border-top: 4px solid #9C1B20;
             position: relative;
@@ -93,12 +93,18 @@
         }
 
         h1 {
-            font-size: 2.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
             line-height: 1.2;
             color: #1a1a1a;
             letter-spacing: -0.02em;
+        }
+
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
         }
 
         .subtitle {
@@ -348,16 +354,19 @@
         <div class="header">
             <div class="brand">
                 <img src="assets/balise-logo-transparent.png" alt="Balise IA" class="logo">
-                <span class="brand-name">Balise IA</span>
+                <div>
+                    <span class="brand-name">Balise IA</span>
+                    <span style="display: block; font-size: 0.6875rem; color: #999; font-style: italic; letter-spacing: 0.01em;">Votre balise dans la complexité réglementaire</span>
+                </div>
             </div>
             <div class="lang-switch">
                 <a href="index_en.html">EN</a>
             </div>
         </div>
 
-        <h1>Votre balise dans la complexité réglementaire.</h1>
+        <h1>Consultez vos règlements municipaux avec l'IA.</h1>
 
-        <p class="subtitle">Balise IA est un outil de navigation réglementaire propulsé par l'IA, pour les citoyens et les équipes municipales - des réponses ancrées dans les sources, avec accès direct aux documents.</p>
+        <p class="subtitle">Balise IA vous aide à trouver rapidement les règles de zonage, d'urbanisme et de construction qui s'appliquent à votre projet — avec des réponses sourcées et un accès direct aux textes officiels.</p>
 
         <div class="domain">
             <div class="jurisdiction">
@@ -381,7 +390,7 @@
         <ul class="features">
             <li>Trouvez rapidement les règles pertinentes. Moins de fouille, moins d’allers-retours</li>
             <li>Réponses fondées sur les sources, à chaque fois  citations incluses, avec accès en un clic au texte de référence</li>
-            <li>Conçu pour les équipes aux ressources limitées. Déploiement rapide, intégration efficace, et faible charge opérationnelle</li>
+            <li>Accessible à tous. Interface simple, réponses en langage clair, et références directes aux textes réglementaires</li>
         </ul>
 
         <p class="status">Version pilote fonctionnelle · Réponses sourcées · Corpus en expansion</p>
@@ -414,6 +423,9 @@
         </div>
 
         <div class="footer">
+            <p style="font-size: 0.75rem; color: #888; line-height: 1.6; margin-bottom: 0.75rem; max-width: 620px; margin-left: auto; margin-right: auto;">
+                Balise IA inc. est une entreprise québécoise. D'abord développé et testé avec les 13 municipalités de la MRC de Rivière-du-Loup. Vos recherches restent privées — aucune donnée partagée ni revendue.
+            </p>
             <p class="copyright">&copy; 2026 Balise IA inc.</p>
         </div>
     </div>
