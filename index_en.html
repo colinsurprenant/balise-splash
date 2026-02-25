@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balise AI - Your beacon in complex regulations.</title>
+    <title>Balise AI - Navigate your municipal regulations with AI</title>
     <style>
         * {
             box-sizing: border-box;
@@ -33,11 +33,11 @@
             bottom: 0;
             pointer-events: none;
             background:
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 18%, rgba(156, 27, 32, 0.05) 18.5%, transparent 19%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 28%, rgba(156, 27, 32, 0.04) 28.5%, transparent 29%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 40%, rgba(156, 27, 32, 0.03) 40.5%, transparent 41%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 55%, rgba(156, 27, 32, 0.025) 55.5%, transparent 56%),
-                radial-gradient(circle at 15% 85%, transparent 0%, transparent 72%, rgba(156, 27, 32, 0.02) 72.5%, transparent 73%);
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 18%, rgba(156, 27, 32, 0.10) 18.5%, transparent 19%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 28%, rgba(156, 27, 32, 0.08) 28.5%, transparent 29%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 40%, rgba(156, 27, 32, 0.06) 40.5%, transparent 41%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 55%, rgba(156, 27, 32, 0.05) 55.5%, transparent 56%),
+                radial-gradient(circle at 15% 85%, transparent 0%, transparent 72%, rgba(156, 27, 32, 0.04) 72.5%, transparent 73%);
             z-index: 0;
         }
 
@@ -46,7 +46,7 @@
             padding: 3rem;
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            max-width: 680px;
+            max-width: 760px;
             width: 100%;
             border-top: 4px solid #9C1B20;
             position: relative;
@@ -93,12 +93,18 @@
         }
 
         h1 {
-            font-size: 2.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
             line-height: 1.2;
             color: #1a1a1a;
             letter-spacing: -0.02em;
+        }
+
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
         }
 
         .subtitle {
@@ -348,16 +354,19 @@
         <div class="header">
             <div class="brand">
                 <img src="assets/balise-logo-transparent.png" alt="Balise AI" class="logo">
-                <span class="brand-name">Balise AI</span>
+                <div>
+                    <span class="brand-name">Balise AI</span>
+                    <span style="display: block; font-size: 0.6875rem; color: #999; font-style: italic; letter-spacing: 0.01em;">Your beacon in complex regulations</span>
+                </div>
             </div>
             <div class="lang-switch">
                 <a href="index.html">FR</a>
             </div>
         </div>
 
-        <h1>Your beacon in complex regulations.</h1>
+        <h1>Navigate your municipal regulations with AI.</h1>
 
-        <p class="subtitle">Balise AI is AI-enabled regulatory navigation for citizens and municipal teams with source-grounded answers and direct access to the underlying documents.</p>
+        <p class="subtitle">Balise AI helps you quickly find the zoning, urban planning, and construction rules that apply to your project — with sourced answers and direct access to the official texts.</p>
 
         <div class="domain">
             <div class="jurisdiction">
@@ -381,7 +390,7 @@
         <ul class="features">
             <li>Find the relevant rules fast. Less digging, less back-and-forth</li>
             <li>Source-grounded answers, every time - citations included, with one-click access to the supporting text</li>
-            <li>Built for resource-limited teams. Fast to roll out, efficient to integrate, and low operational overhead.</li>
+            <li>Accessible to all. Simple interface, plain-language answers, and direct links to official regulatory texts</li>
         </ul>
 
         <p class="status">Live pilot · Sourced answers · Expanding corpus</p>
@@ -414,6 +423,9 @@
         </div>
 
         <div class="footer">
+            <p style="font-size: 0.75rem; color: #888; line-height: 1.6; margin-bottom: 0.75rem; max-width: 620px; margin-left: auto; margin-right: auto;">
+                Balise AI inc. is a Quebec-based company. First developed and tested with the 13 municipalities of MRC de Rivière-du-Loup. Your searches stay private — no data shared or sold.
+            </p>
             <p class="copyright">&copy; 2026 Balise AI inc.</p>
         </div>
     </div>
