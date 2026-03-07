@@ -66,17 +66,6 @@
             gap: 0.75rem;
         }
 
-        .logo {
-            width: 120px;
-            height: auto;
-        }
-
-        .brand-name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-
         .lang-switch {
             font-size: 0.8125rem;
             color: #666;
@@ -90,6 +79,17 @@
 
         .lang-switch a:hover {
             text-decoration: underline;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
         h1 {
@@ -107,37 +107,170 @@
             }
         }
 
-        .subtitle {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #4a4a4a;
+        .value-props {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
             margin-bottom: 2rem;
         }
 
-        .features {
-            list-style: none;
-            margin-bottom: 2rem;
-            text-align: left;
+        .value-prop {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
         }
 
-        .features li {
+        .value-prop-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: rgba(156, 27, 32, 0.07);
+        }
+
+        .value-prop-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: #9C1B20;
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .value-prop-text {
             font-size: 0.9375rem;
             line-height: 1.5;
             color: #4a4a4a;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-            position: relative;
+            padding-top: 0.375rem;
         }
 
-        .features li::before {
+        .value-prop-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .audience-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .audience-block {
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audience-block::before {
             content: "";
             position: absolute;
+            top: 0;
             left: 0;
-            top: 0.875rem;
-            width: 6px;
-            height: 6px;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #9C1B20 0%, rgba(156, 27, 32, 0.2) 100%);
+        }
+
+        .audience-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Per-block subtle backgrounds */
+        .audience-block--citizens {
+            background: #fafafa;
+            border: 1px solid #eee;
+        }
+        .audience-block--muni {
+            background: linear-gradient(135deg, #faf8f8 0%, #fafafa 100%);
+            border: 1px solid #f0e8e8;
+        }
+        .audience-block--pro {
+            background: #fafafa;
+            border: 1px solid #eee;
+        }
+
+        .audience-block-header {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .audience-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: rgba(156, 27, 32, 0.08);
+        }
+
+        .audience-icon svg {
+            width: 16px;
+            height: 16px;
+            stroke: #9C1B20;
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .audience-badge {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            color: #9C1B20;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            background: rgba(156, 27, 32, 0.06);
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+        }
+
+        .audience-block p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #4a4a4a;
+            margin: 0;
+        }
+
+        .audience-stat {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #9C1B20;
+            margin-top: 0.625rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(156, 27, 32, 0.1);
+        }
+
+        .section-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-dots span {
+            width: 5px;
+            height: 5px;
             background-color: #9C1B20;
             border-radius: 50%;
+            opacity: 0.3;
+        }
+
+        .section-dots span:nth-child(2) {
+            opacity: 0.5;
         }
 
         .cta-section {
@@ -190,16 +323,14 @@
             text-align: center;
         }
 
-        .scope {
-            font-size: 0.8125rem;
-            color: #666;
-            margin-bottom: 0.75rem;
-        }
-
-        .disclaimer {
+        .footer-text {
             font-size: 0.75rem;
             color: #888;
-            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .copyright {
@@ -207,12 +338,37 @@
             color: #999;
         }
 
-        .status {
-            font-size: 0.8125rem;
-            color: #888;
-            text-align: center;
+        .status-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem;
             margin-bottom: 1.5rem;
-            letter-spacing: 0.01em;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            font-size: 0.8125rem;
+            color: #4a4a4a;
+        }
+
+        .status-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: #9C1B20;
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        .status-item span {
+            font-weight: 500;
         }
 
         .domain {
@@ -366,8 +522,6 @@
 
         <h1>Navigate your municipal regulations with AI.</h1>
 
-        <p class="subtitle">Balise AI helps you quickly find the zoning, urban planning, and construction rules that apply to your project — with sourced answers and direct access to the official texts.</p>
-
         <div class="domain">
             <div class="jurisdiction">
                 <span>Municipal</span>
@@ -387,13 +541,75 @@
             </div>
         </div>
 
-        <ul class="features">
-            <li>Find the relevant rules fast. Less digging, less back-and-forth</li>
-            <li>Source-grounded answers, every time - citations included, with one-click access to the supporting text</li>
-            <li>Accessible to all. Simple interface, plain-language answers, and direct links to official regulatory texts</li>
-        </ul>
+        <div class="value-props">
+            <div class="value-prop">
+                <div class="value-prop-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </div>
+                <div class="value-prop-text"><strong>Quickly find</strong> the relevant rules across all municipal, MRC, and provincial regulations</div>
+            </div>
+            <div class="value-prop">
+                <div class="value-prop-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg>
+                </div>
+                <div class="value-prop-text"><strong>Every answer cites its sources</strong>: articles, sections, and bylaw numbers, with direct access to the official text</div>
+            </div>
+            <div class="value-prop">
+                <div class="value-prop-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+                <div class="value-prop-text"><strong>Everything is verifiable.</strong> No claim without a reference — validate every answer in one click</div>
+            </div>
+        </div>
 
-        <p class="status">Live pilot · Sourced answers · Expanding corpus</p>
+        <div class="audience-blocks">
+            <div class="audience-block audience-block--citizens">
+                <div class="audience-block-header">
+                    <div class="audience-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+                    </div>
+                    <span class="audience-badge">Citizens</span>
+                </div>
+                <p>Quickly understand the rules that apply to your project before contacting your municipality. Show up better informed, ask the right questions, and simplify your interactions.</p>
+            </div>
+            <div class="audience-block audience-block--muni">
+                <div class="audience-block-header">
+                    <div class="audience-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V10l8-7 8 7v11H4z"/><path d="M4 21h16M12 3v4M8 14h1M15 14h1M8 18h1M15 18h1"/></svg>
+                    </div>
+                    <span class="audience-badge">Municipalities and MRCs</span>
+                </div>
+                <p>Fast, precise access to regulations for your teams, with no technology infrastructure required. Less time lost searching and verifying, more rigour. Coming soon, tools built for your workflow: cross-municipality regulatory comparisons, simultaneous searches across an entire MRC, bylaw concordance reviews.</p>
+                <span class="audience-stat">All municipalities within an MRC · No installation required</span>
+            </div>
+            <div class="audience-block audience-block--pro">
+                <div class="audience-block-header">
+                    <div class="audience-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2M3 7h18v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/><path d="M12 11v4M10 13h4"/></svg>
+                    </div>
+                    <span class="audience-badge">Professionals</span>
+                </div>
+                <p>Contractors, architects, notaries, surveyors: search the regulatory corpus of multiple municipalities in seconds.</p>
+                <span class="audience-stat">Multiple municipalities · One search</span>
+            </div>
+        </div>
+
+        <div class="section-dots"><span></span><span></span><span></span></div>
+
+        <div class="status-items">
+            <div class="status-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+                <span>Live pilot</span>
+            </div>
+            <div class="status-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+                <span>Sourced and verifiable answers</span>
+            </div>
+            <div class="status-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Expanding corpus</span>
+            </div>
+        </div>
 
         <div class="coverage">
             <details>
@@ -423,7 +639,7 @@
         </div>
 
         <div class="footer">
-            <p style="font-size: 0.75rem; color: #888; line-height: 1.6; margin-bottom: 0.75rem; max-width: 620px; margin-left: auto; margin-right: auto;">
+            <p class="footer-text">
                 Balise AI inc. is a Quebec-based company. First developed and tested with the 13 municipalities of MRC de Rivière-du-Loup. Your searches stay private — no data shared or sold.
             </p>
             <p class="copyright">&copy; 2026 Balise AI inc.</p>
