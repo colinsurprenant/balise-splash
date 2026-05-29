@@ -174,6 +174,10 @@
             font-weight: 600;
         }
         @media (max-width: 640px) {
+            h1 {
+                white-space: normal;
+                overflow: visible;
+            }
             .hero-kicker { padding-left: 0; }
         }
 
@@ -553,6 +557,13 @@
             50% { opacity: 0.5; transform: scale(0.85); }
         }
 
+        @media (max-width: 640px) {
+            .coverage summary { flex-wrap: wrap; row-gap: 4px; }
+            .coverage summary .mrc-name { flex-basis: 100%; order: 4; }
+            .coverage summary .count { flex-basis: 100%; margin-left: 0; order: 5; }
+            .coverage summary::after { margin-left: auto; }
+        }
+
         .coverage-list {
             padding: 0 22px 22px;
             columns: 2;
@@ -821,7 +832,7 @@
             <summary>
                 <span class="live-dot"></span>
                 <span class="live-label">Couverture active</span>
-                MRC de Rivière-du-Loup
+                <span class="mrc-name">MRC de Rivière-du-Loup</span>
                 <span class="count">13 municipalités</span>
             </summary>
             <ul class="coverage-list">
